@@ -14,10 +14,15 @@ class App extends Component {
       age: "",
       renderLoginForm: false,
       authenticated: false,
-      email: '',
-      password: '',
-      message: ''
+      email: "",
+      password: "",
+      message: "",
+      entrySaved: false
     };
+  }
+
+  entryHandler() {
+    this.setState({ entrySaved: true });
   }
 
   onChange(event) {

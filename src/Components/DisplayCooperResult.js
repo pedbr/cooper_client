@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CooperCalculator from "../Modules/CooperCalculator";
+import { saveData } from '../Modules/PerformanceData';
 
 class DisplayCooperResult extends Component {
   calculate() {
@@ -11,7 +12,7 @@ class DisplayCooperResult extends Component {
   };
 
   render() {
-    
+
     async saveCooperData() {
       const result = this.calculate();
       try {
