@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DisplayCooperResult from "./Components/DisplayCooperResult";
 import InputFields from "./Components/InputFields";
+import LoginForm from "./Components/LoginForm";
 import "./App.css";
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
         <InputFields inputChangeHandler={this.onChange.bind(this)} />
 
         <button id="login">Login</button>
+        <LoginForm />
 
         <DisplayCooperResult
           distance={this.state.distance}
