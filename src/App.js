@@ -17,7 +17,8 @@ class App extends Component {
       email: "",
       password: "",
       message: "",
-      entrySaved: false
+      entrySaved: false,
+      renderIndex: false
     };
   }
 
