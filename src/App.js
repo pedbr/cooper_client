@@ -1,12 +1,27 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Cooper Client</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <div>
+          <label>Distance</label>
+          <input id="distance" />
+        </div>
+
+        <select id="gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+
+        <div>
+          <label>Age</label>
+          <input id="age" />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
