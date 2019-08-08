@@ -11,7 +11,11 @@ class App extends Component {
       distance: "",
       gender: "female",
       age: "",
-      renderLoginForm: false
+      renderLoginForm: false,
+      authenticated: false,
+      email: '',
+      password: '',
+      message: ''
     };
   }
 
@@ -21,6 +25,16 @@ class App extends Component {
     });
   }
 
+  async onLogin(e) {
+    e.preventDefault();
+    let resp = await authenticate(this.state.email, this.state.password);
+    if (resp.authenticated === true) {
+      this.setState({ authenticated: true });
+    } else {
+      this.setState({ message: resp.message, renderLoginForm: false });
+    }
+  }
+
   render() {
     let renderLogin;
 
@@ -28,7 +42,12 @@ class App extends Component {
       renderLogin = <LoginForm />;
     } else {
       renderLogin = (
-        <button id="login" onClick={() => this.setState({ renderLoginForm: true })}>Login</button>
+        <button
+          id="login"
+          onClick={() => this.setState({ renderLoginForm: true })}
+        >
+          Login
+        </button>
       );
     }
 
