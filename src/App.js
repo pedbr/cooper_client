@@ -124,6 +124,9 @@ class App extends Component {
 
     return (
       <div>
+        <div className="title-div">
+          <p className="title">COOPER TEST</p>
+        </div>
         <InputFields inputChangeHandler={this.onChange.bind(this)} />
 
         <DisplayCooperResult
