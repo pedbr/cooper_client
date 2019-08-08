@@ -1,18 +1,20 @@
 import React from "react";
 
-const LoginForm = () => {
+const LoginForm = props => {
   return (
     <form>
       <div>
         <label>Email</label>
-        <input id="email" />
+        <input id="email" onChange={props.inputChangeHandler} />
       </div>
 
       <div>
         <label>Password</label>
-        <input id="password" />
+        <input id="password" onChange={props.inputChangeHandler} />
       </div>
-      <button id="submit">Submit</button>
+      <button onClick={e => props.loginHandler(e)} id="submit">
+        Submit
+      </button>
     </form>
   );
 };

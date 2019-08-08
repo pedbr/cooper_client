@@ -39,7 +39,12 @@ class App extends Component {
     let renderLogin;
 
     if (this.state.renderLoginForm === true) {
-      renderLogin = <LoginForm />;
+      renderLogin = (
+        <LoginForm
+          loginHandler={this.onLogin.bind(this)}
+          inputChangeHandler={this.onChange.bind(this)}
+        />
+      );
     } else {
       renderLogin = (
         <button
