@@ -112,3 +112,30 @@ body {
   border-radius:5px;
   color:white;
 }
+
+.input-data-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-data-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#fd746c;
+  background: white;
+  border-radius:10px;
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.input-data-element{
+  margin-bottom: 10px;
+}
