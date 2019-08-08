@@ -19,7 +19,8 @@ class App extends Component {
       password: "",
       message: "",
       entrySaved: false,
-      renderIndex: false
+      renderIndex: false,
+      updateIndex: false
     };
   }
 
