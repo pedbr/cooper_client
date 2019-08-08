@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DisplayCooperResult from "./Components/DisplayCooperResult";
 import InputFields from "./Components/InputFields";
 import LoginForm from "./Components/LoginForm";
+import DisplayPerformanceData from "./Components/DisplayPerformanceData";
 import { authenticate } from "./Modules/Auth";
 import "./App.css";
 
@@ -61,6 +62,28 @@ class App extends Component {
           Show past entries
         </button>
       );
+      if (this.state.renderIndex === true) {
+        performanceDataIndex = (
+          <>
+            <DisplayPerformanceData
+              updateIndex={this.state.updateIndex}
+              indexUpdated={this.indexUpdated.bind(this)}
+            />
+            <button onClick={() => this.setState({ renderIndex: false })}>
+              Hide past entries
+            </button>
+          </>
+        );
+      } else {
+        performanceDataIndex = (
+          <button
+            id="show-index"
+            onClick={() => this.setState({ renderIndex: true })}
+          >
+            Show past entries
+          </button>
+        );
+      }
     } else {
       if (this.state.renderLoginForm === true) {
         renderLogin = (
