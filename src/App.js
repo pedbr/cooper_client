@@ -94,7 +94,7 @@ class App extends Component {
     } else {
       if (this.state.renderLoginForm === true) {
         renderLogin = (
-          <>
+          <div className="login-form-div">
             <LoginForm
               loginHandler={this.onLogin.bind(this)}
               inputChangeHandler={this.onChange.bind(this)}
@@ -105,12 +105,13 @@ class App extends Component {
             >
               Hide
             </button>
-          </>
+          </div>
         );
       } else {
         renderLogin = (
           <>
             <button
+              className="login-button"
               id="login"
               onClick={() => this.setState({ renderLoginForm: true })}
             >
@@ -124,6 +125,7 @@ class App extends Component {
 
     return (
       <div>
+        <div className="login-button-div">{renderLogin}</div>
         <div className="title-div">
           <p className="title">COOPER TEST</p>
         </div>
@@ -138,7 +140,6 @@ class App extends Component {
           entryHandler={this.entryHandler.bind(this)}
         />
         {performanceDataIndex}
-        {renderLogin}
       </div>
     );
   }
