@@ -46,12 +46,13 @@ class App extends Component {
   render() {
     let renderLogin;
     let user;
+    let performanceDataIndex;
 
     if (this.state.authenticated === true) {
       user = JSON.parse(sessionStorage.getItem("credentials")).uid;
       renderLogin = (
       <p>Hi {user}</p>
-      )
+      );
       performanceDataIndex = (
         <button
           id="show-index"
@@ -97,6 +98,7 @@ class App extends Component {
           entrySaved={this.state.entrySaved}
           entryHandler={this.entryHandler.bind(this)}
         />
+        {performanceDataIndex}
         {renderLogin}
       </div>
     );
