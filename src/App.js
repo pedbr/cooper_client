@@ -24,7 +24,11 @@ class App extends Component {
   }
 
   entryHandler() {
-    this.setState({ entrySaved: true });
+    this.setState({ entrySaved: true, updateIndex: true });
+  }
+
+  indexUpdated() {
+    this.setState({ updateIndex: false });
   }
 
   onChange(event) {
@@ -51,9 +55,7 @@ class App extends Component {
 
     if (this.state.authenticated === true) {
       user = JSON.parse(sessionStorage.getItem("credentials")).uid;
-      renderLogin = (
-      <p>Hi {user}</p>
-      );
+      renderLogin = <p>Hi {user}</p>;
       performanceDataIndex = (
         <button
           id="show-index"
