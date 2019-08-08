@@ -8,9 +8,20 @@ class DisplayCooperResult extends Component {
       this.props.gender,
       this.props.age
     );
-  }
+  };
 
   render() {
+    
+    async saveCooperData() {
+      const result = this.calculate();
+      try {
+        await saveData(result);
+        this.props.entryHandler();
+      } catch(error) {
+        console.log(error);
+      }
+    } 
+
     let results;
     let saveButton;
 
