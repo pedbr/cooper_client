@@ -39,6 +39,10 @@ class App extends Component {
     });
   }
 
+  hideLoginForm() {
+    this.setState({ renderLoginForm: false });
+  }
+
   async onLogin(e) {
     e.preventDefault();
     let resp = await authenticate(this.state.email, this.state.password);
@@ -95,6 +99,12 @@ class App extends Component {
               loginHandler={this.onLogin.bind(this)}
               inputChangeHandler={this.onChange.bind(this)}
             />
+            <button
+              id="hide"
+              onClick={() => this.setState({ renderLoginForm: false })}
+            >
+              Hide
+            </button>
           </>
         );
       } else {

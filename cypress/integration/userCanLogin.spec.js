@@ -39,4 +39,12 @@ describe("User can log in", () => {
     });
     cy.contains("Invalid login credentials. Please try again.");
   });
+
+  it("can hide login form", () => {
+    cy.visit("http://localhost:3001");
+    cy.server();
+    cy.get("#login").click();
+    cy.get("#hide").click();
+    cy.contains("Login");
+  });
 });
