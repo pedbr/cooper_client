@@ -48,7 +48,17 @@ class App extends Component {
 
     if (this.state.authenticated === true) {
       user = JSON.parse(sessionStorage.getItem("credentials")).uid;
-      renderLogin = <p>Hi {user}</p>;
+      renderLogin = (
+      <p>Hi {user}</p>
+      )
+      performanceDataIndex = (
+        <button
+          id="show-index"
+          onClick={() => this.setState({ renderIndex: true })}
+        >
+          Show past entries
+        </button>
+      );
     } else {
       if (this.state.renderLoginForm === true) {
         renderLogin = (
