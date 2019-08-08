@@ -101,6 +101,7 @@ class App extends Component {
             />
             <button
               id="hide"
+              className="login-form-button"
               onClick={() => this.setState({ renderLoginForm: false })}
             >
               Hide

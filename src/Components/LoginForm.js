@@ -4,18 +4,33 @@ import "../App.css";
 const LoginForm = props => {
   return (
     <div id="login-form" className="login-form">
-      <div>
+      <div className="login-form-title">WELCOME</div>
+      <div className="login-form-element">
         <label>Email</label>
-        <input id="email" onChange={props.inputChangeHandler} />
+        <input
+          className="input-box"
+          id="email"
+          onChange={props.inputChangeHandler}
+        />
       </div>
 
-      <div>
+      <div className="login-form-element">
         <label>Password</label>
-        <input id="password" onChange={props.inputChangeHandler} />
+        <input
+          className="input-box"
+          id="password"
+          onChange={props.inputChangeHandler}
+        />
       </div>
-      <button onClick={e => props.loginHandler(e)} id="submit">
-        Submit
-      </button>
+      <div className="login-form-element">
+        <button
+          className="login-form-button"
+          onClick={e => props.loginHandler(e)}
+          id="submit"
+        >
+          Submit
+        </button>
+      </div>
     </div>
   );
 };
