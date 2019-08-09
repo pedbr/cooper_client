@@ -305,6 +305,7 @@ body {
   padding: 10px;
   border-radius: 5px;
   color:#fd746c;
+  font-family: sans-serif;
 }
 
 ::placeholder {
