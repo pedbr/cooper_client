@@ -138,7 +138,7 @@ class App extends Component {
           <div>
             <InputFields inputChangeHandler={this.onChange.bind(this)} />
           </div>
-          <div>
+          <div className="display-result-div">
             <DisplayCooperResult
               distance={this.state.distance}
               gender={this.state.gender}
