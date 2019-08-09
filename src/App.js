@@ -57,6 +57,7 @@ class App extends Component {
     let renderLogin;
     let user;
     let performanceDataIndex;
+    let instructionText = `The Cooper Test was developed by Dr. Ken Cooper in 1968 as an easy way to measure aerobic fitness. To perform the test the athlete must warm up for 10 minutes, then run at the highest intensity possible for 12 minutes. After the 12 minute run is complete just insert the distance that was covered, and the gender and age of the athlete.`;
 
     if (this.state.authenticated === true) {
       user = JSON.parse(sessionStorage.getItem("credentials")).uid;
@@ -130,17 +131,25 @@ class App extends Component {
         <div className="title-div">
           <p className="title">COOPER TEST</p>
         </div>
-        <InputFields inputChangeHandler={this.onChange.bind(this)} />
-
-        <DisplayCooperResult
-          distance={this.state.distance}
-          gender={this.state.gender}
-          age={this.state.age}
-          authenticated={this.state.authenticated}
-          entrySaved={this.state.entrySaved}
-          entryHandler={this.entryHandler.bind(this)}
-        />
-        {performanceDataIndex}
+        <div className="center-block">
+          <div className="instructions-div">
+            <div className="instructions-text">{instructionText}</div>
+          </div>
+          <div>
+            <InputFields inputChangeHandler={this.onChange.bind(this)} />
+          </div>
+          <div>
+            <DisplayCooperResult
+              distance={this.state.distance}
+              gender={this.state.gender}
+              age={this.state.age}
+              authenticated={this.state.authenticated}
+              entrySaved={this.state.entrySaved}
+              entryHandler={this.entryHandler.bind(this)}
+            />
+          </div>
+          {performanceDataIndex}
+        </div>
       </div>
     );
   }

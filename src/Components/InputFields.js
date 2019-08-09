@@ -2,7 +2,6 @@ import React from "react";
 
 const InputFields = props => {
   return (
-    <div className="input-data-div">
       <div className="input-data-form">
         <div className="input-form-title">INPUT YOUR DATA</div>
         <div className="input-data-label">
@@ -39,7 +38,6 @@ const InputFields = props => {
           />
         </div>
       </div>
-    </div>
   );
 };
 

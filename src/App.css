@@ -5,6 +5,8 @@ body {
   background: linear-gradient(to right, #fd746c, #ff9068);
 }
 
+/* HEADER */
+
 .title-div {
   display:flex;
   flex-wrap: wrap;
@@ -23,6 +25,8 @@ body {
   padding-right: 10px;
   padding-left: 10px;
 }
+
+/* LOG IN */
 
 .login-button-div{
   position: absolute;
@@ -101,6 +105,32 @@ body {
   background: #fd908a;
 }
 
+.center-block {
+  outline: 2px solid;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* INSTRUCTIONS TEXT */
+
+.instructions-div{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 250px;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: white;
+  font-size: 15px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+/* INPUT DATA FORM */
+
 .input-box {
   text-align:center;
   background: #ffb5b1;
@@ -115,11 +145,7 @@ body {
 }
 
 .input-data-div {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .input-data-form {
