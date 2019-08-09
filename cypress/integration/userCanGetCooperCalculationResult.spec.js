@@ -7,7 +7,7 @@ describe("Cooper Client calculates successfully", () => {
   });
 
   it("displays age", () => {
-    cy.contains("23 y/o");
+    cy.contains("23 years old");
   });
 
   it("displays gender", () => {
@@ -15,10 +15,10 @@ describe("Cooper Client calculates successfully", () => {
   });
 
   it("displays distance", () => {
-    cy.contains("running 1000 meters");
+    cy.contains("Running 1000 meters");
   });
 
   it("displays result", () => {
-    cy.contains("Result: Poor");
+    cy.contains("POOR");
   });
 });
