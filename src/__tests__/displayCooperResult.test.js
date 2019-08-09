@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import DisplayCooperResult from "../Components/DisplayCooperResult";
 
-describe("<DisplatCooperResult />", () => {
+describe("<DisplayCooperResult />", () => {
   it("evaluates the correct result for female/poor", () => {
     const describedComponent = shallow(
       <DisplayCooperResult distance="1000" gender="female" age="23" />
