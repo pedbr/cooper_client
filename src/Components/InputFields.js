@@ -4,8 +4,9 @@ const InputFields = props => {
   return (
     <div className="input-data-div">
       <div className="input-data-form">
-        <div className="input-data-element">
-          <label>Distance</label>
+        <div className="input-form-title">INPUT YOUR DATA</div>
+        <div className="input-data-label">
+          <div>Distance</div>
         </div>
         <div className="input-data-element">
           <input
@@ -14,9 +15,12 @@ const InputFields = props => {
             onChange={props.inputChangeHandler}
           />
         </div>
+        <div className="input-data-label">
+          <div>Gender</div>
+        </div>
         <div className="input-data-element">
           <select
-            className="input-box"
+            className="input-box-select"
             id="gender"
             onChange={props.inputChangeHandler}
           >
@@ -24,8 +28,8 @@ const InputFields = props => {
             <option value="male">Male</option>
           </select>
         </div>
-        <div className="input-data-element">
-          <label>Age</label>
+        <div className="input-data-label">
+          <div>Age</div>
         </div>
         <div className="input-data-element">
           <input
