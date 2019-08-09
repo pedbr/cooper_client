@@ -1,10 +1,10 @@
 export const CooperCalculator = (distance, gender, age) => {
   const ratings = [
-    "Excellent",
-    "Above average",
-    "Average",
-    "Below average",
-    "Poor"
+    "EXCELLENT",
+    "ABOVE AVERAGE",
+    "AVERAGE",
+    "BELOW AVERAGE",
+    "POOR"
   ];
 
   const cooperTable = {
@@ -52,7 +52,7 @@ export const CooperCalculator = (distance, gender, age) => {
   const ageRange = ageRangeTable(parseInt(age));
 
   if (ageRange === "invalid range") {
-    return "Invalid age range";
+    return "INVALID AGE RANGE";
   }
 
   const distanceRanges = cooperTable[gender.toLowerCase()][ageRange];

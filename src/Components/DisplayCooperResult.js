@@ -51,17 +51,22 @@ class DisplayCooperResult extends Component {
       results = (
         <>
           <div>
-            <div>
+            <div className="result-element">
               {this.props.age} years old {this.props.gender}
             </div>
-            <div>running {this.props.distance} meters.</div>
+            <div className="result-element">
+              Running {this.props.distance} meters.
+            </div>
           </div>
-          <p>Result: {this.calculate()}</p>
+          <div>
+            <div className="result-word">Result:</div>
+            <div className="result-actual">{this.calculate()}</div>
+          </div>
           {saveButton}
         </>
       );
     } 
-    if (this.props.age === "" && this.props.distance === "") {
+    if (this.props.age === "" || this.props.distance === "") {
       results = (
           <div className="results-placeholder">RESULTS WILL SHOW HERE</div>
       );

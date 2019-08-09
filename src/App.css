@@ -212,6 +212,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #fd746c;
   font-family: 'Josefin Sans', sans-serif;
   padding: 20px
@@ -219,4 +220,34 @@ body {
 
 .results-placeholder {
 
+}
+
+.result-element {
+  margin-bottom: 30px;
+}
+
+.result-word {
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+.result-actual {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fd746c;
+  color: white;
+  padding-top: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-radius: 5px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  color: #ffe1e0;
 }
