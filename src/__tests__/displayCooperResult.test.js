@@ -8,7 +8,7 @@ describe("<DisplatCooperResult />", () => {
     const describedComponent = shallow(
       <DisplayCooperResult distance="1000" gender="female" age="23" />
     );
-    const response = <p>Result: Poor</p>;
+    const response = 'POOR';
     expect(describedComponent.contains(response)).toEqual(true);
   });
 
@@ -16,7 +16,7 @@ describe("<DisplatCooperResult />", () => {
     const describedComponent = shallow(
       <DisplayCooperResult distance="2000" gender="female" age="23" />
     );
-    const response = <p>Result: Average</p>;
+    const response = 'AVERAGE';
     expect(describedComponent.contains(response)).toEqual(true);
   });
 });
