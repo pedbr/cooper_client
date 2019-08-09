@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -106,9 +107,11 @@ body {
 }
 
 .center-block {
-  outline: 2px solid;
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* INSTRUCTIONS TEXT */
@@ -215,7 +218,8 @@ body {
   text-align: center;
   color: #fd746c;
   font-family: 'Josefin Sans', sans-serif;
-  padding: 20px
+  padding: 20px;
+  height: 280px;
 }
 
 .results-placeholder {
@@ -224,6 +228,9 @@ body {
 
 .result-element {
   margin-bottom: 30px;
+  background: #ffd5d3;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .result-word {
@@ -248,6 +255,63 @@ body {
   margin-bottom: 20px;
 }
 
+.save-button {
+  background: #ffa19c;
+  padding-right:30px;
+  padding-left:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border:none;
+  border-radius:5px;
+  color:white;
+  cursor: pointer;
+}
+
+.show-entries-button{
+  background: white;
+  margin-left: 30px;
+  height: 30px;
+  padding-right:30px;
+  padding-left:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border:none;
+  border-radius:5px;
+  color:#fd746c;
+  cursor: pointer;
+}
+
+.hide-last-entries {
+  background: white;
+  margin-left: 30px;
+  height: 30px;
+  padding-right:30px;
+  padding-left:30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  border:none;
+  border-radius:5px;
+  color:#fd746c;
+  cursor: pointer;
+}
+
+.performance-data {
+  margin: 20px;
+  margin-bottom: 30px;
+  background: #ffd5d3;
+  padding: 10px;
+  border-radius: 5px;
+  color:#fd746c;
+}
+
 ::placeholder {
   color: #ffe1e0;
+}
+
+.user-greeting {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
 }

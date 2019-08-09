@@ -61,7 +61,7 @@ class App extends Component {
 
     if (this.state.authenticated === true) {
       user = JSON.parse(sessionStorage.getItem("credentials")).uid;
-      renderLogin = <p>Hi {user}</p>;
+      renderLogin = <p className="user-greeting">Hi {user}</p>;
       performanceDataIndex = (
         <button
           id="show-index"
@@ -77,7 +77,9 @@ class App extends Component {
               updateIndex={this.state.updateIndex}
               indexUpdated={this.indexUpdated.bind(this)}
             />
-            <button onClick={() => this.setState({ renderIndex: false })}>
+            <button 
+              className="hide-last-entries"
+              onClick={() => this.setState({ renderIndex: false })}>
               Hide past entries
             </button>
           </>
@@ -86,6 +88,7 @@ class App extends Component {
         performanceDataIndex = (
           <button
             id="show-index"
+            className="show-entries-button"
             onClick={() => this.setState({ renderIndex: true })}
           >
             Show past entries

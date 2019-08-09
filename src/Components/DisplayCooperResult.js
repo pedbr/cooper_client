@@ -32,7 +32,7 @@ class DisplayCooperResult extends Component {
     ) {
       saveButton = (
         <>
-          <button id="save-result" onClick={this.saveCooperData.bind(this)}>
+          <button id="save-result" className="save-button" onClick={this.saveCooperData.bind(this)}>
             Save entry
           </button>
         </>

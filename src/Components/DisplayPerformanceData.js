@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getData } from "../Modules/PerformanceData";
+import "../App.css";
 
 class DisplayPerformanceData extends Component {
   constructor(props) {
@@ -27,9 +28,14 @@ class DisplayPerformanceData extends Component {
     }
     if (this.state.performanceData != null) {
       dataIndex = (
-        <div>
+        <div className="performance-data">
           {this.state.performanceData.map(item => {
-            return <div key={item.id}>{item.data.message}</div>;
+            return (
+              <div key={item.id}>
+                {item.id}.
+                {item.data.message}
+              </div>
+            );
           })}
         </div>
       );
