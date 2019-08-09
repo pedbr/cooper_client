@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import DisplayCooperResult from "./Components/DisplayCooperResult";
 import InputFields from "./Components/InputFields";
 import LoginForm from "./Components/LoginForm";
+import SignupForm from "./Components/SignupForm";
 import DisplayPerformanceData from "./Components/DisplayPerformanceData";
 import { authenticate } from "./Modules/Auth";
 import "./App.css";
@@ -14,6 +15,7 @@ class App extends Component {
       gender: "female",
       age: "",
       renderLoginForm: false,
+      renderSignupForm: false,
       authenticated: false,
       email: "",
       password: "",
@@ -77,9 +79,10 @@ class App extends Component {
               updateIndex={this.state.updateIndex}
               indexUpdated={this.indexUpdated.bind(this)}
             />
-            <button 
+            <button
               className="hide-last-entries"
-              onClick={() => this.setState({ renderIndex: false })}>
+              onClick={() => this.setState({ renderIndex: false })}
+            >
               Hide past entries
             </button>
           </>
@@ -96,17 +99,43 @@ class App extends Component {
         );
       }
     } else {
-      if (this.state.renderLoginForm === true) {
+      if (this.state.renderLoginForm === true && this.state.renderSignupForm === false){
+        renderLogin = (
+          <div>
+            <div className="login-form-div">
+              <LoginForm
+                loginHandler={this.onLogin.bind(this)}
+                inputChangeHandler={this.onChange.bind(this)}
+              />
+              <button
+                id="hide"
+                className="login-form-button"
+                onClick={() =>
+                  this.setState({ renderSignupForm: true })
+                }
+              >
+                Sign Up
+              </button>
+              <button
+                id="hide"
+                className="login-form-button"
+                onClick={() =>
+                  this.setState({ renderLoginForm: false })
+                }
+              >
+                Hide
+              </button>
+            </div>
+          </div>
+        );
+      } else if (this.state.renderSignupForm === true){
         renderLogin = (
           <div className="login-form-div">
-            <LoginForm
-              loginHandler={this.onLogin.bind(this)}
-              inputChangeHandler={this.onChange.bind(this)}
-            />
+            <SignupForm />
             <button
               id="hide"
               className="login-form-button"
-              onClick={() => this.setState({ renderLoginForm: false })}
+              onClick={() => this.setState({ renderSignupForm: false })}
             >
               Hide
             </button>
