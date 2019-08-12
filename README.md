@@ -1,3 +1,22 @@
+# The Cooper Test
+
+### Author: Pedro Brás
+#
+
+The Cooper Test was developed by Dr. Ken Cooper in 1968 as an easy way to measure aerobic fitness. To perform the test the athlete must warm up for 10 minutes, then run at the highest intensity possible for 12 minutes. After the 12 minute run is complete just insert the distance that was covered, and the gender and age of the athlete.
+
+#
+
+## The project:
+
+This project consisted on the creation of a full stack application for people to check the results of the above mentioned cooper test. The backend (API) was built on Ruby on Rails a and the frontend (client) was built on ReactJS.
+
+#### [Visit the deployed app here](https://pb-cooper-test.netlify.com).
+
+(Note: For the app to run properly accessing the API please fork the API repository [here](https://github.com/pedrocbras/cooper_api) and run it with the rails s command.)
+
+#
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -36,33 +55,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
