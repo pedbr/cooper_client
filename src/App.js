@@ -122,7 +122,9 @@ class App extends Component {
             >
               Login
             </button>
-            <p>{this.state.message}</p>
+            <div className="user-greeting">
+              <p>{this.state.message}</p>
+            </div>
           </>
         );
       }
